@@ -16,6 +16,8 @@ spec:
       containers:
         - name: db-deployment
           image: nouchka/sqlite3
+          ports:
+            - containerPort: 8000
           volumeMounts:
             - name: db-data
               mountPath: /var/lib/sqlite/data
